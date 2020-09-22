@@ -1,0 +1,18 @@
+# CS321 
+What we're going to need to get done:
+
+For the quiz:
+-Edit plant database to have computer-readable information
+-Come up with questions that can be answered on some sort of scale (ie. how much do you have to spend on a plant)
+-From those questions, add certain values to each answer that will direct to each plant
+-Implement answers->plant algorithm
+
+
+For the reminders:
+-Again, edit the plant database so we can get info from it
+-Access time/date
+-Do so whenever the page is opened
+-Establish 'last time watered' variable that will remain after app/page is closed
+-Establish 'how long till next water' variable from which plant is being watered
+-Use above 2 variables to calculate if plant needs to be watered
+-If possible: Have a way for the program to give reminders if it's not open? (might need some research here)
