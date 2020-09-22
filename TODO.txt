@@ -6,6 +6,7 @@ For the quiz:
 -Come up with questions that can be answered on some sort of scale (ie. how much do you have to spend on a plant)
 -From those questions, add certain values to each answer that will direct to each plant
 -Implement answers->plant algorithm
+-Create a dialogue quiz gui (maybe find a package that'll make it look pretty?) that the questions/answers can be fed into and out of
 
 
 For the reminders:
