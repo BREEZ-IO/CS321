@@ -1,12 +1,29 @@
 # CS321 
 What we're going to need to get done:
 
-For the quiz:
--Edit plant database to have computer-readable information
--Come up with questions that can be answered on some sort of scale (ie. how much do you have to spend on a plant)
--From those questions, add certain values to each answer that will direct to each plant
--Implement answers->plant algorithm
--Create a dialogue quiz gui (maybe find a package that'll make it look pretty?) that the questions/answers can be fed into and out of
+QuizClass():
+answers = AskQuestions():
+chosenPlant = PickPlant(answers)
+PlantInfo = SearchPlants(chosenPlant)
+
+AskQuestions():
+*implement GUI to generate quiz
+*get rankings from each question into readable format
+return rankings
+
+PickPlant(answers):
+*insert flooring of questions here*
+return plant
+
+SearchPlants(chosenPlant):   ** imported from utilities file if possible **
+*go through text file
+*select specific plant
+*get plant's data
+return plantInfo (as list)
+
+
+PlantCareClass(plantType):
+
 
 For the reminders:
 -Again, edit the plant database so we can get info from it
