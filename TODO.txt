@@ -8,7 +8,6 @@ For the quiz:
 -Implement answers->plant algorithm
 -Create a dialogue quiz gui (maybe find a package that'll make it look pretty?) that the questions/answers can be fed into and out of
 
-
 For the reminders:
 -Again, edit the plant database so we can get info from it
 -Access time/date
@@ -18,3 +17,41 @@ For the reminders:
 -Use above 2 variables to calculate if plant needs to be watered
 -If possible: Have a way for the program to give reminders if it's not open? (might need some research here)
 
+Plants Ranked
+
+ZZ Plant
+Pothos (Beginner Friendly)
+Peace Lily
+Snake Plant (Beginner Friendly)
+Spider Plant (low maintenance)
+Aloe Vera
+Air Plant
+Dragon Tree
+Chinese Money Plant
+10 Fiddle Leaf Fig Tree
+
+Quiz Class
+Methods:
+
+?
+Questions: scale from 1(low) - 5 (high)
+
+How many plants do you have now?
+Low score: beginner plants
+High score: advanced plants
+I can spend 3 hours a week tending to my plants.
+Low score: low maintenance plants
+High score: high maintenance, indirect bright light, water often plants
+I kill most of my plants (1 - yes, 5 - no)
+Low score: low maintenance
+High score: any plant
+I want a tree
+Low score: plant
+High score tree.
+I have a green thumb
+**** add more questions. I have numbered the plants in our database from low score to high score. We can get the average score of the quiz, floor it, and recommend the plant with that score. If the score is higher than 10, we can recommend the best plant. Or maybe we could do a random number generator to choose the plant with the +/- 1 rank of their score. ****
+
+Plant Class
+Methods:
+
+setWateringPeriod(): sets the watering period for every n days or like once a week?
