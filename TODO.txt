@@ -17,3 +17,5 @@ For the reminders:
 -Establish 'how long till next water' variable from which plant is being watered
 -Use above 2 variables to calculate if plant needs to be watered
 -If possible: Have a way for the program to give reminders if it's not open? (might need some research here)
+
+i'm just typing this to see if it works
