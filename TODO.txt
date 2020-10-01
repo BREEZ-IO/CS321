@@ -25,9 +25,11 @@ return plantInfo (as list)
 PlantClass(plantType):
 SetPlantVariables()
 SetReminders()
+AssignNickname()
 
 
 InteractiveClass():
+dict MyPlants
 AddPlant()
 RemovePlant()
 ClearReminders()
