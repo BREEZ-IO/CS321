@@ -30,6 +30,7 @@ SetReminders()
 InteractiveClass():
 AddPlant()
 RemovePlant()
+ClearReminders()
 
 
 
