@@ -27,6 +27,11 @@ SetPlantVariables()
 SetReminders()
 
 
+InteractiveClass():
+AddPlant()
+RemovePlant()
+
+
 
 For the reminders:
 -Again, edit the plant database so we can get info from it
