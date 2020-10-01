@@ -22,7 +22,10 @@ SearchPlants(chosenPlant):   ** imported from utilities file if possible **
 return plantInfo (as list)
 
 
-PlantCareClass(plantType):
+PlantClass(plantType):
+SetPlantVariables()
+SetReminders()
+
 
 
 For the reminders:
