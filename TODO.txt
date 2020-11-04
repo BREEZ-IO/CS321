@@ -16,7 +16,7 @@ UtilitiesClass():
   *insert flooring of questions here*
   return plant
 
-  SearchPlants(chosenPlant):   ** imported from utilities file if possible **
+  SearchPlants(chosenPlant):
   *go through text file
   *select specific plant
   *get plant's data
