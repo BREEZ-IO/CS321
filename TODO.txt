@@ -6,20 +6,21 @@ answers = AskQuestions():
 chosenPlant = PickPlant(answers)
 PlantInfo = SearchPlants(chosenPlant)
 
-AskQuestions():
-*implement GUI to generate quiz
-*get rankings from each question into readable format
-return rankings
+  AskQuestions():
+  *implement GUI to generate quiz
+  *get rankings from each question into readable format
+  return rankings
 
-PickPlant(answers):
-*insert flooring of questions here*
-return plant
+UtilitiesClass():
+  PickPlant(answers):
+  *insert flooring of questions here*
+  return plant
 
-SearchPlants(chosenPlant):   ** imported from utilities file if possible **
-*go through text file
-*select specific plant
-*get plant's data
-return plantInfo (as list)
+  SearchPlants(chosenPlant):   ** imported from utilities file if possible **
+  *go through text file
+  *select specific plant
+  *get plant's data
+  return plantInfo (as list)
 
 
 PlantClass(plantType):
