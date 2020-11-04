@@ -23,7 +23,7 @@ UtilitiesClass(): #Bre?
   return plantInfo (as list)
 
 
-PlantClass(plantType):
+PlantClass(plantType): #Amber
 SetPlantVariables()
 SetReminders()
 AssignNickname()
