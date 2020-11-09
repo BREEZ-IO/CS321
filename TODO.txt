@@ -1,12 +1,12 @@
 # CS321 
 What we're going to need to get done:
 
-QuizClass():
+QuizClass(): # Michaela 
 answers = AskQuestions():
 chosenPlant = PickPlant(answers)
 PlantInfo = SearchPlants(chosenPlant)
 
-  AskQuestions(): # Michaela 
+  AskQuestions(): 
   *implement GUI to generate quiz
   *get rankings from each question into readable format
   return rankings
