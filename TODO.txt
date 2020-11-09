@@ -6,7 +6,7 @@ answers = AskQuestions():
 chosenPlant = PickPlant(answers)
 PlantInfo = SearchPlants(chosenPlant)
 
-  AskQuestions():
+  AskQuestions(): # Michaela 
   *implement GUI to generate quiz
   *get rankings from each question into readable format
   return rankings
