@@ -1,0 +1,57 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>50</x><y>49</y><w>440</w><h>270</h></coordinates><panel_attributes>Plant
+--
+- PlantName : String
+- PlantNickname : String
+- PlantSciName : String
+- PlantLight : String 
+- PlantWaterInfo : int
+- LastWatered : Date
+- MaintenanceLevel : int
++ pCharacteristics : dict
+--
++ Plant(name : String, sciName : String, light : String, water : String)
++ GetName() : String
++ GetNickname() : String
++ SetNickname(nickname : String) : void
++ GetSciName() : String
++ GetLight() : String
++ GetWaterInfo() : int
++ SetReminder() : void
++ WaterPlant() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>149</y><w>280</w><h>120</h></coordinates><panel_attributes>Interaction
+--
+_- MyPlants : ArrayList&lt;Plant&gt;_
+_- MainPlants : ArrayList&lt;Plant&gt;_
+--
++ Interaction()
++ AddPlant(Plant) : void
++ RemovePlant(Plant) : void
++ ShowPlants() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>429</y><w>210</w><h>170</h></coordinates><panel_attributes>Utility
+--
+- AvailablePlants : ArrayList&lt;Plant&gt;
+- scanner : Scanner
+- ReminderTime : Date
++ Water : bool
+--
++ Utility()
++ SearchPlants(name : String) : Plant
++ CheckWater(ReminderTime : Date) : bool
++ LoadFile(fileName : String, aList : ArrayList&lt;&gt;) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>449</y><w>310</w><h>230</h></coordinates><panel_attributes>PlantGUI
+--
++ WindowWidth : int
++ WindowHeight : int
+_-pages : List&lt;PlantGUI&gt;_
+--
++ PlantGUI()
++ OpenPage(PlantGUI) : void
++ pageSwap(PlantGUI, PlantGUI) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>679</y><w>210</w><h>190</h></coordinates><panel_attributes>Quiz
+--
+- PlantOptions : ArrayList&lt;Plants&gt;
+_- QuizQuestionsAddress : String_
+_- Questions : ArrayList&lt;Strings&gt;_
+- Answer
+- ChosenPlant : Plant
+--
++ Quiz()
++ AskQuestion(index : int) : int
++ RemoveChoice(attribute : int) : int
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
