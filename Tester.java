@@ -18,9 +18,6 @@ public class Tester {
         // create ArrayList
         ArrayList<Plant> mainPlants = new ArrayList<>();
         
-        //String file = "MainPlants.txt";
-        //String type = "Plants";
-        
         test.loadFile("MainPlants.txt", "Plants", mainPlants);
         
        Iterator<Plant> testIterator = mainPlants.iterator();
@@ -28,6 +25,9 @@ public class Tester {
        while (testIterator.hasNext()) {
            testIterator.next().printInfo();
        }
-        
+       
+       ArrayList<Plant> myPlants = (ArrayList<Plant>)mainPlants.clone();
+       
+       test.writeFile(myPlants);
     }
 }
