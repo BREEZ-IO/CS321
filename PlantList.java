@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 /**
  * A class to load files
- * @author amberlaihipp
+ * @author Bre McNichols
  */
 public class PlantList {
     /**
