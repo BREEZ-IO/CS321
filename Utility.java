@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.Iterator;
 /**
- * A class to load files
+ * A class to load and save files
  * @author amberlaihipp
  */
 public class Utility {
