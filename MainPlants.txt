@@ -1,0 +1,80 @@
+Fiddle Leaf Fig
+Ficus lyrata
+NULL
+Bright Indirect
+Once a week
+NULL
+High
+***************
+Chinese Money Plant
+Pilea peperomioides
+NULL
+Indirect
+Once a week
+NULL
+Medium
+***************
+Spider Plant
+Chlorophytum comosum
+NULL
+Indirect
+Once a week
+NULL
+Low
+***************
+Peace Lily
+Spathiphyllum wallisii
+NULL
+Low
+Twice a week
+NULL
+Medium
+***************
+Air Plant
+Tillandsia
+NULL
+Bright
+Once a week
+NULL
+Low
+***************
+Aloe Vera
+Aloe barbadensis
+NULL
+Bright
+Once a week
+NULL
+Medium
+***************
+Snake Plant
+Sansevieria trifasciata
+NULL
+Bright indirect
+Once a week
+NULL
+Low
+***************
+ZZ Plant
+Zamioculcas zamiifolia
+NULL
+Bright indirect
+Bimonthly
+NULL
+Low
+***************
+Pothos
+Epipremnum
+NULL
+Bright indirect
+Once a week
+NULL
+Low
+***************
+Dragon Tree
+Dracaena fragrans
+NULL
+Low indirect
+Twice a week
+NULL
+Medium
+***************
