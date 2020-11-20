@@ -1,8 +1,7 @@
 import java.util.*;
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Used to test functionality of other classes
+ * Will not be in final project
  */
 
 /**
@@ -12,22 +11,20 @@ import java.util.*;
 public class Tester {
     
     public static void main(String[] args) {
-        // create utility
-        Utility test = new Utility();
         
-        // create ArrayList
-        ArrayList<Plant> mainPlants = new ArrayList<>();
+        // create mainPlant list from file
+        PlantList mainPlants = new PlantList("MainPlants.txt");
         
-        test.loadFile("MainPlants.txt", "Plants", mainPlants);
+        // print list of main plants
+        mainPlants.printList();
         
-       Iterator<Plant> testIterator = mainPlants.iterator();
+        // create empty myPlants list
+        PlantList myPlants = new PlantList();
+        
+        // test add plant function, add Pothos to myPlants
+        myPlants.addPlant(new Plant(mainPlants.searchList("Pothos", "Plant Name")));
        
-       while (testIterator.hasNext()) {
-           testIterator.next().printInfo();
-       }
-       
-       ArrayList<Plant> myPlants = (ArrayList<Plant>)mainPlants.clone();
-       
-       test.writeFile(myPlants);
+        // save myPlants list
+        myPlants.saveList();
     }
 }
