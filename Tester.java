@@ -23,6 +23,23 @@ public class Tester {
         
         // test add plant function, add Pothos to myPlants
         myPlants.addPlant(new Plant(mainPlants.searchList("Pothos", "Plant Name")));
+        
+        // test add plant function, add Peace Lily to myPlants
+        myPlants.addPlant(new Plant(mainPlants.searchList("Peace Lily", "Plant Name")));
+        
+        // test add plant function, add Chinese Money Plant to myPlants
+        myPlants.addPlant(new Plant(mainPlants.searchList("Chinese Money Plant", "Plant Name")));
+        
+        // print out myPlant
+        System.out.println("**My Plants List**");
+        myPlants.printList();
+        
+        // test remove plant
+        myPlants.removePlant(myPlants.searchList("Peace Lily", "Plant Name"));
+        
+        // print out myPlant
+        System.out.println("**My Plants List**");
+        myPlants.printList();
        
         // save myPlants list
         myPlants.saveList();
