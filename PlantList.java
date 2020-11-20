@@ -33,6 +33,26 @@ public class PlantList {
         }  
     }
     
+    public Plant SearchList(String search, String searchType){
+        for (int i = 0; i < plantsList.size(); i++){
+            Plant temp = plantsList.get(i);
+            if (searchType == "Nickname"){
+                if (temp.plantNickname == search){
+                    return temp;
+                }
+            } 
+            else if (searchType == "Plant Name"){
+                if (temp.plantName == search){
+                    return temp;
+                }
+            }
+            else {
+                return null;
+            }
+        }
+        System.out.println("Plant " + search + "not found.");
+        return null;
+    }
+    
     ArrayList<Plant> plantsList = new ArrayList<Plant>();
 }
-
