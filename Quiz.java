@@ -17,21 +17,26 @@ public class Quiz {
      * Default constructor for Quiz class. 
      * @param 
      */
+    private ArrayList<String> question; 
+    private ArrayList<String> plants; 
+    
     public Quiz() {
         //call loadfile from utility class 
+        Utility obj = new Utility(); 
+        question = obj.loadFile(filename, "Questions", question); //idk filename
         
         //create copy of plant options arraylist of options 
-        ArrayList<String> plants = Plants;
+        Utility obj2 = new Utility(); 
+        plants = obj2.loadFile (filename, "Plants", plants); //idk filename
         
     }
-    
-    private void askQuestions() {
-        int i = 0; //number of questions to help stop loop  
-        
-        Scanner a = new Scanner(System.in);
-        while (continueQuiz == true || i <= questions.size()-1) {
+    private Plant askQuestions() {
+        int i = 0; //prime to help stop loop 
+        Scanner a = new Scanner(System.in); //for user input
+
+        while (continueQuiz == true || i <= question.size()-1) {
             //read question from arrayList 
-            System.out.println(questions.get(i));
+            System.out.println(question.get(i));
             
             //store answer 
             answer = a.nextLine(); 
@@ -39,13 +44,13 @@ public class Quiz {
             //compare variable to the factor in other plants 
             //CALL arrayList.remove choice for for plants that do not have that factor
             for(int j = plants.size()-1; j >= 0; j--) {//truly inefficient
-                if (plants.get(j).fieldA != answer) {
+                if (plants.get(j).tempWaterInfo != answer) {
                     plants.removePlantOption(plants.get(j));
                 }
-                else if (plants.get(j).fieldB != answer) {
+                else if (plants.get(j).tempMLevel != answer) { //maybe idk if this is the right field
                     plants.removePlantOption(plants.get(j));
                 }
-                else if (plants.get(j).fieldC != answer) {
+                else if (plants.get(j).tempLight != answer) {
                     plants.removePlantOption(plants.get(j));
                 }      
             }
@@ -58,6 +63,7 @@ public class Quiz {
         }
         
         chosenPlant = choosePlant(plants);
+        return chosenPlant;
     }
     
     private void removePlantOption(Plant p) {
@@ -70,6 +76,7 @@ public class Quiz {
         Random rand = new Random(); 
         int index =  rand.nextInt(p.size());
         chosenPlant = p.get(index); 
+        
         return chosenPlant; 
     }
     
