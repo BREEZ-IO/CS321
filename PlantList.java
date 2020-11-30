@@ -58,6 +58,33 @@ public class PlantList {
         return null;
     }
     
+        public Plant filterList(String search, String searchType) {
+        for (Plant p : plantsList) {
+            if (searchType.equals("Water")){
+                if (p.getWaterInfo().contains(search))
+                    continue;
+                else
+                    return p;
+            } 
+            else if (searchType.equals("Maintenance")) {
+                int m = Integer.parseInt((p.getMaintenanceLevel()));
+                int a = Integer.parseInt(search);
+                if (m > a)
+                    return p;
+                else
+                    continue;
+            }
+            else if (searchType.equals("Light")) {
+                if (p.getLightInfo().contains(search))
+                    continue;
+                else
+                    return p;
+            }
+        }
+        
+        return null;
+    }
+    
     public void saveList() {
         Utility test = new Utility();
         test.writeFile(plantsList);
