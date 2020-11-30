@@ -13,6 +13,10 @@ public class Quiz {
     public Quiz() {
         // create list of plant options
         PlantList plantOptions = new PlantList("MainPlants.txt");
+                
+        // create list of questions
+        Utility util = new Utility();
+        util.loadFile("Questions.txt", "Questions", questions);
     }
     
     
