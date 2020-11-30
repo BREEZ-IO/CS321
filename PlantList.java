@@ -63,5 +63,9 @@ public class PlantList {
         test.writeFile(plantsList);
     }
     
+    public int getSize() {
+        return plantsList.size();
+    }
+    
     private ArrayList<Plant> plantsList = new ArrayList<Plant>();
 }
