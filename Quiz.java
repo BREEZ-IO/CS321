@@ -2,82 +2,62 @@ import java.util.*;
 
 /**
  * @author Michaela Dent
- * Quiz holds a question bank, and chooses a plant based on the answers
- * user gives. 
+ * Quiz generates questions, and chooses a plant to suggest for the user
+ * based on the responses given.
  */
 public class Quiz {
-    
-    private ArrayList<String> questions; //list of questions
-    private String answer; 
-    private ArrayList<Plant> plants; // array list of plants copy 
-    private Plant chosenPlant; //Plant object 
-    private boolean continueQuiz = true; 
-    
+
     /**
      * Default constructor for Quiz class. 
-     * @param 
      */
-    private ArrayList<String> question; 
-    private ArrayList<String> plants; 
-    
     public Quiz() {
-        //call loadfile from utility class 
-        Utility obj = new Utility(); 
-        question = obj.loadFile(filename, "Questions", question); //idk filename
-        
-        //create copy of plant options arraylist of options 
-        Utility obj2 = new Utility(); 
-        plants = obj2.loadFile (filename, "Plants", plants); //idk filename
-        
+        // create list of plant options
+        PlantList plantOptions = new PlantList("MainPlants.txt");
     }
+    
+    
+    /**
+     * askQuestions generates questions for the user to answer and filters plant
+     * options based on the user's response.
+     * @return chosenPlant, a plant object that is suggested to the user. 
+     */
     private Plant askQuestions() {
-        int i = 0; //prime to help stop loop 
-        Scanner a = new Scanner(System.in); //for user input
-
-        while (continueQuiz == true || i <= question.size()-1) {
-            //read question from arrayList 
-            System.out.println(question.get(i));
+        int i = 0; //number of questions to help stop loop  
+        
+        Scanner a = new Scanner(System.in);
+        while (continueQuiz == true || i <= questions.size()-1) {
             
-            //store answer 
-            answer = a.nextLine(); 
+            System.out.println(questions.get(i)); //read question from arrayList 
+            answer = a.nextLine(); //user's answer 
             
-            //compare variable to the factor in other plants 
-            //CALL arrayList.remove choice for for plants that do not have that factor
-            for(int j = plants.size()-1; j >= 0; j--) {//truly inefficient
-                if (plants.get(j).tempWaterInfo != answer) {
-                    plants.removePlantOption(plants.get(j));
-                }
-                else if (plants.get(j).tempMLevel != answer) { //maybe idk if this is the right field
-                    plants.removePlantOption(plants.get(j));
-                }
-                else if (plants.get(j).tempLight != answer) {
-                    plants.removePlantOption(plants.get(j));
-                }      
+            // call filterList to remove plant options based on responses
+            if(i == 0){
+                plantOptions.filterList(answer, "Water"); 
             }
-            
-            //IF there are n > 1 plants, continue quiz ELSE continueQuiz = false
-            if (plants.size() < 1) {
+            else if (i == 1){
+                plantOptions.filterList(answer, "Maintenance");
+            }
+            else if (i == 2){
+                plantOptions.filterList(answer, "Light");
+            }
+
+            //stops asking questions if there are no more plant options
+            if (plantOptions.getSize() < 1) {
                 continueQuiz = false; 
             }
+            
             i ++; 
         }
         
-        chosenPlant = choosePlant(plants);
-        return chosenPlant;
-    }
-    
-    private void removePlantOption(Plant p) {
-        this.remove(p); 
-    }
-    
-    private Plant choosePlant( ArrayList<Plant> p) {
-        //random num generator 
-        //return index
-        Random rand = new Random(); 
-        int index =  rand.nextInt(p.size());
-        chosenPlant = p.get(index); 
-        
+        chosenPlant = plantOptions.getRandom();
         return chosenPlant; 
     }
     
+    private ArrayList<String> questions; //list of questions
+    private String answer; 
+    private PlantList plantOptions; 
+    private Plant chosenPlant; 
+    private boolean continueQuiz = true; 
+    
 }
+
