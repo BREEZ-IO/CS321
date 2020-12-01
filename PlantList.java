@@ -8,14 +8,19 @@ import java.util.ArrayList;
 public class PlantList {
     /**
      * 
-     */
-    // Create empty plant list
-    public PlantList() {
-        
-    }
-    
+     */    
     // Create list from a file
     public PlantList(String filename) {
+        // if trying to create MyPlants
+        if (fileName.equals("MyPlants.txt")) {
+            // check to see if file exists
+            File myPlants = new File(fileName);
+            // if file does not exist
+            if (myPlants.isFile() == false) {
+                // return empty list
+                return;
+            }
+        }
         Utility test = new Utility();
         test.loadFile(filename, "Plants", plantsList);
     }
