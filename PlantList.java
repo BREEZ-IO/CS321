@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+
 /**
  * A class to create and manipulate lists of plants.
- * @author Bre McNichols and Amber Lai Hipp
+ *
+ * @author Bre McNichols and Amber Lai Hipp and Michaela Dent
  */
 public class PlantList {
     /**
@@ -34,7 +36,8 @@ public class PlantList {
             System.out.println(temp.getNickname());
             System.out.println(temp.getLightInfo());
             System.out.println(temp.getWaterInfo());
-            System.out.println(temp.getLastWateredDate() + "\n");
+            System.out.println(temp.getLastWateredDate());
+            System.out.println(temp.getMaintenanceLevel() + "\n");
         }  
     }
     
@@ -49,40 +52,44 @@ public class PlantList {
                 if (p.getName().contains(search)){
                     return p;
                 }
-            }
-            else {
-                return null;
-            }
+            )
         }
+            
         System.out.println("Plant " + search + " not found.");
         return null;
     }
     
-        public Plant filterList(String search, String searchType) {
+    public void filterList(String search, String searchType) {
+        ArrayList<Plant> mismatch = new ArrayList<Plant>();
         for (Plant p : plantsList) {
-            if (searchType.equals("Water")){
+            if (searchType.equals("Water")) {
                 if (p.getWaterInfo().contains(search))
                     continue;
-                else
-                    return p;
+                else {
+                    mismatch.add(p);
+                }    
             } 
             else if (searchType.equals("Maintenance")) {
                 int m = Integer.parseInt((p.getMaintenanceLevel()));
                 int a = Integer.parseInt(search);
-                if (m > a)
-                    return p;
+                if (m > a) {
+                    mismatch.add(p);
+                }
                 else
                     continue;
             }
             else if (searchType.equals("Light")) {
                 if (p.getLightInfo().contains(search))
                     continue;
-                else
-                    return p;
+                else {
+                    mismatch.add(p);
+                }
             }
         }
-        
-        return null;
+        // remove mismatches
+        plantsList.removeAll(mismatch);
+        // add some sort of exception check for empty list
+        return;
     }
     
     public void saveList() {
@@ -92,6 +99,15 @@ public class PlantList {
     
     public int getSize() {
         return plantsList.size();
+    }
+    
+    public Plant getRandom() {
+        if (plantsList.size() == 1)
+            return plantsList.get(0);
+        Random rand = new Random();
+        int i = rand.nextInt(plantsList.size());
+        
+        return plantsList.get(i);
     }
     
     private ArrayList<Plant> plantsList = new ArrayList<Plant>();
