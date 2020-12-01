@@ -9,7 +9,6 @@ public class PlantList {
     /**
      * 
      */    
-    // Create list from a file
     public PlantList(String filename) {
         // if trying to create MyPlants
         if (fileName.equals("MyPlants.txt")) {
