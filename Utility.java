@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
-import java.util.Iterator;
+
 /**
- * A class to load and save files
- * @author amberlaihipp
+ * A class to load and save files.
+ *
+ * @author Amber Lai Hipp
  */
 public class Utility {
     /**
