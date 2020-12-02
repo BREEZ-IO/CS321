@@ -33,9 +33,6 @@ public class PlantList {
     
     public void removePlant(Plant deadPlant, boolean removeReminder) {
         plantsList.remove(deadPlant);
-        if (removeReminder){
-            //add logic
-        }
     }
     
     public void printList(){
