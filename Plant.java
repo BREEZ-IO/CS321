@@ -44,9 +44,10 @@ public class Plant {
        return lastWatered;
     }
     
-    //public void setLastWaterDate(Date d) {
-    //    
-    //}
+    public void setLastWateredDate() {
+        LocalDate date = LocalDate.now();
+        lastWatered = date.toString();
+    }
     
     public String getMaintenanceLevel() {
         return maintenanceLevel;
