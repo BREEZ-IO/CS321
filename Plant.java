@@ -70,4 +70,3 @@ public class Plant {
     private String lastWatered;
     private String maintenanceLevel;
 }
-
