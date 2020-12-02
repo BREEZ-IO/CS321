@@ -53,13 +53,13 @@ public class Plant {
     }
     
     private int getWaterInfoinDays(){
-        if (("Once a week") in plantWaterInfo){
+        if (plantWaterInfo.contains("Once a week")){
             return 7;
         }
-        else if (("Twice a week") in plantWaterInfo){
+        else if (plantWaterInfo.contains("Twice a week")){
             return 3;
         }
-        else if (("Twice a month") in plantWateredInfo){
+        else if (plantWaterInfo.contains("Twice a month")){
             return 14;
         }
         else {
