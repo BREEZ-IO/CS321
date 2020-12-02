@@ -24,12 +24,18 @@ public class PlantList {
         test.loadFile(filename, "Plants", plantsList);
     }
     
-    public void addPlant(Plant newPlant) {
+    public void addPlant(Plant newPlant, boolean setReminder) {
         plantsList.add(newPlant);
+        if (setReminder){
+            //add logic
+        }
     }
     
-    public void removePlant(Plant deadPlant) {
+    public void removePlant(Plant deadPlant, boolean removeReminder) {
         plantsList.remove(deadPlant);
+        if (removeReminder){
+            //add logic
+        }
     }
     
     public void printList(){
