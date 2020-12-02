@@ -1,7 +1,3 @@
 How many times a week do you want to water your plant on average?
-
-How experienced (on a scale of 1-5) are you with houseplants?
-
-How well-lit (on a scale of 1-5) is the place for your plant?
-
-How tall do you want your plant to get (in inches)?
+How experienced are you with houseplants?
+What kind of light is there in the location you plan to put the plant?

@@ -9,7 +9,7 @@ public class Quiz {
     
     private ArrayList<String> questions; //list of questions
     private String answer; 
-    private ArrayList<Plant> plants; // array list of plants copy 
+    private PlantList plantOptions; // array list of plants copy 
     private Plant chosenPlant; //Plant object 
     private boolean continueQuiz = true; 
     
@@ -18,11 +18,8 @@ public class Quiz {
      * @param 
      */
     public Quiz() {
-        //call loadfile from utility class 
-        
-        //create copy of plant options arraylist of options 
-        ArrayList<String> plants = Plants;
-        
+        // create list of plant options
+        PlantList plantOptions = new PlantList("MainPlants.txt");
     }
     
     private void askQuestions() {
@@ -38,15 +35,15 @@ public class Quiz {
             
             //compare variable to the factor in other plants 
             //CALL arrayList.remove choice for for plants that do not have that factor
-            for(int j = plants.size()-1; j >= 0; j--) {//truly inefficient
-                if (plants.get(j).fieldA != answer) {
-                    plants.removePlantOption(plants.get(j));
+            for(int j = plantOptions.size()-1; j >= 0; j--) {//truly inefficient
+                if (plantOptions.get(j).fieldA != answer) {
+                    plantOptions.removePlant(plantOptions.get(j));
                 }
-                else if (plants.get(j).fieldB != answer) {
-                    plants.removePlantOption(plants.get(j));
+                else if (plantOptions.get(j).fieldB != answer) {
+                    plantOptions.removePlantOption(plantOptions.get(j));
                 }
-                else if (plants.get(j).fieldC != answer) {
-                    plants.removePlantOption(plants.get(j));
+                else if (plantOptions.get(j).fieldC != answer) {
+                    plantOptions.removePlantOption(plantOptions.get(j));
                 }      
             }
             
@@ -57,14 +54,14 @@ public class Quiz {
             i ++; 
         }
         
-        chosenPlant = choosePlant(plants);
+        chosenPlant = choosePlant(plantOptions);
     }
     
     private void removePlantOption(Plant p) {
         this.remove(p); 
     }
     
-    private Plant choosePlant( ArrayList<Plant> p) {
+    private Plant choosePlant(PlantList p) {
         //random num generator 
         //return index
         Random rand = new Random(); 

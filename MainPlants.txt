@@ -1,0 +1,80 @@
+Fiddle Leaf Fig
+Ficus lyrata
+NULL
+Bright Indirect
+7
+NULL
+High
+***************
+Chinese Money Plant
+Pilea peperomioides
+NULL
+Indirect
+7
+NULL
+Medium
+***************
+Spider Plant
+Chlorophytum comosum
+NULL
+Indirect
+7
+NULL
+Low
+***************
+Peace Lily
+Spathiphyllum wallisii
+NULL
+Low
+3
+NULL
+Medium
+***************
+Air Plant
+Tillandsia
+NULL
+Bright
+7
+NULL
+Low
+***************
+Aloe Vera
+Aloe barbadensis
+NULL
+Bright
+7
+NULL
+Medium
+***************
+Snake Plant
+Sansevieria trifasciata
+NULL
+Bright indirect
+7
+NULL
+Low
+***************
+ZZ Plant
+Zamioculcas zamiifolia
+NULL
+Bright indirect
+14
+NULL
+Low
+***************
+Pothos
+Epipremnum
+NULL
+Bright indirect
+7
+NULL
+Low
+***************
+Dragon Tree
+Dracaena fragrans
+NULL
+Low indirect
+3
+NULL
+Medium
+***************
