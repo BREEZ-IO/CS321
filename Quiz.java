@@ -1,73 +1,82 @@
+
 import java.util.*;
 
 /**
- * @author Michaela Dent
  * Quiz holds a question bank, and chooses a plant based on the answers
- * user gives. 
+ * user gives.
+ * 
+ * @author Michaela Dent and Amber Lai Hipp
  */
-public class Quiz {
-    
-    private ArrayList<String> questions; //list of questions
-    private String answer; 
-    private PlantList plantOptions; // array list of plants copy 
-    private Plant chosenPlant; //Plant object 
-    private boolean continueQuiz = true; 
+public class Quiz {    
+    /**
+     * Default constructor for Quiz class.
+     */
+    public Quiz() {        
+        // Create list of questions
+        Utility util = new Utility();
+        util.loadFile("Questions.txt", "Questions", questions);
+    }
     
     /**
-     * Default constructor for Quiz class. 
-     * @param 
+     * Generates questions for the user to answer and filters plant
+     * options based on the user's response.
      */
-    public Quiz() {
-        // create list of plant options
+    public void runQuiz() {
+        // Create list of plant options
         PlantList plantOptions = new PlantList("MainPlants.txt");
-    }
-    
-    private void askQuestions() {
-        int i = 0; //number of questions to help stop loop  
+        String answer = "";
         
         Scanner a = new Scanner(System.in);
-        while (continueQuiz == true || i <= questions.size()-1) {
-            //read question from arrayList 
-            System.out.println(questions.get(i));
+        // For each question in the list
+        for (int i = 0; i < questions.size(); i++) {
+            // Print question
+            System.out.println(questions.get(i) + "\n");
             
-            //store answer 
+            // Store answer 
             answer = a.nextLine(); 
             
-            //compare variable to the factor in other plants 
-            //CALL arrayList.remove choice for for plants that do not have that factor
-            for(int j = plantOptions.size()-1; j >= 0; j--) {//truly inefficient
-                if (plantOptions.get(j).fieldA != answer) {
-                    plantOptions.removePlant(plantOptions.get(j));
-                }
-                else if (plantOptions.get(j).fieldB != answer) {
-                    plantOptions.removePlantOption(plantOptions.get(j));
-                }
-                else if (plantOptions.get(j).fieldC != answer) {
-                    plantOptions.removePlantOption(plantOptions.get(j));
-                }      
+            // Question 1
+            if (i == 0) {
+                // Elminate plants that require too much water
+                plantOptions.filterList(answer, "Water");
+            }
+            // Question 2
+            else if (i == 1) {
+                // Eliminate plants that are too high maintenance
+                plantOptions.filterList(answer, "Maintenance");
+            }
+            // Question 3
+            else if (i == 2) {
+                // Eliminate plants that don't meet light requirements
+                plantOptions.filterList(answer, "Light");
             }
             
-            //IF there are n > 1 plants, continue quiz ELSE continueQuiz = false
-            if (plants.size() < 1) {
-                continueQuiz = false; 
+            // Stop asking questions if there are no more plant options
+            if (plantOptions.getSize() == 0) {
+                System.out.println("Please try again, there were no plants that matched your answers");
+                return;
             }
-            i ++; 
+            // Test print statement to check if list is being altered correctly
+            //plantOptions.printList();
         }
         
-        chosenPlant = choosePlant(plantOptions);
-    }
+        /*
+        if (plantOptions.getSize() == 0) {
+            System.out.println("Please try again, there were no plants that matched your answers");
+        }
+        */
+        //else {
+        // Choose a plant randomly from ones left in the list
+        Plant chosenPlant = plantOptions.getRandom();
+        
+        // Display chosenPlant
+        System.out.println("Recommended Plant: " + chosenPlant.getName());
+        //}
+    }  
     
-    private void removePlantOption(Plant p) {
-        this.remove(p); 
-    }
-    
-    private Plant choosePlant(PlantList p) {
-        //random num generator 
-        //return index
-        Random rand = new Random(); 
-        int index =  rand.nextInt(p.size());
-        chosenPlant = p.get(index); 
-        return chosenPlant; 
-    }
-    
+    private ArrayList<String> questions = new ArrayList<>(); // List of questions
+    //private String answer;
+    //private PlantList plantOptions; // array list of plants copy 
+    //private Plant chosenPlant; //Plant object 
+    //private boolean continueQuiz = true; 
 }
