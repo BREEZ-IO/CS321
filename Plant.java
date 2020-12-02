@@ -52,6 +52,21 @@ public class Plant {
         return maintenanceLevel;
     }
     
+    private int getWaterInfoinDays(){
+        if (("Once a week") in plantWaterInfo){
+            return 7;
+        }
+        else if (("Twice a week") in plantWaterInfo){
+            return 3;
+        }
+        else if (("Twice a month") in plantWateredInfo){
+            return 14;
+        }
+        else {
+            return 0;
+        }
+    }
+    
     public void printInfo() {
         System.out.println("Name: " + plantName);
         System.out.println("Scientific Name: " + plantSciName);
