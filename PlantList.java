@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class PlantList {
     /**
      * 
+     */    
     public PlantList(String filename) {
         // if trying to create MyPlants
         if (fileName.equals("MyPlants.txt")) {
