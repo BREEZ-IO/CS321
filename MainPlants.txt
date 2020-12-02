@@ -2,7 +2,7 @@ Fiddle Leaf Fig
 Ficus lyrata
 NULL
 Bright Indirect
-Once a week
+7
 NULL
 High
 ***************
@@ -10,7 +10,7 @@ Chinese Money Plant
 Pilea peperomioides
 NULL
 Indirect
-Once a week
+7
 NULL
 Medium
 ***************
@@ -18,7 +18,7 @@ Spider Plant
 Chlorophytum comosum
 NULL
 Indirect
-Once a week
+7
 NULL
 Low
 ***************
@@ -26,7 +26,7 @@ Peace Lily
 Spathiphyllum wallisii
 NULL
 Low
-Twice a week
+3
 NULL
 Medium
 ***************
@@ -34,7 +34,7 @@ Air Plant
 Tillandsia
 NULL
 Bright
-Once a week
+7
 NULL
 Low
 ***************
@@ -42,7 +42,7 @@ Aloe Vera
 Aloe barbadensis
 NULL
 Bright
-Once a week
+7
 NULL
 Medium
 ***************
@@ -50,7 +50,7 @@ Snake Plant
 Sansevieria trifasciata
 NULL
 Bright indirect
-Once a week
+7
 NULL
 Low
 ***************
@@ -58,7 +58,7 @@ ZZ Plant
 Zamioculcas zamiifolia
 NULL
 Bright indirect
-Bimonthly
+14
 NULL
 Low
 ***************
@@ -66,7 +66,7 @@ Pothos
 Epipremnum
 NULL
 Bright indirect
-Once a week
+7
 NULL
 Low
 ***************
@@ -74,7 +74,7 @@ Dragon Tree
 Dracaena fragrans
 NULL
 Low indirect
-Twice a week
+3
 NULL
 Medium
 ***************
