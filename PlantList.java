@@ -43,7 +43,11 @@ public class PlantList {
     public void removePlant(Plant deadPlant) {
         plantsList.remove(deadPlant);
     }
-    
+    /**
+    Function to return the entire list as a string.
+    @return output Each plant's toString function conjoined together
+    @see toString()
+    */
     public String printList(){
         String output = "";
         for (Plant p : plantsList) {
