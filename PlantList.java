@@ -9,7 +9,7 @@ public class PlantList {
     /**
      * 
      */    
-    public PlantList(String filename) {
+    public PlantList(String filename, Utility util) {
         // if trying to create MyPlants
         if (fileName.equals("MyPlants.txt")) {
             // check to see if file exists
@@ -20,8 +20,7 @@ public class PlantList {
                 return;
             }
         }
-        Utility test = new Utility();
-        test.loadFile(filename, "Plants", plantsList);
+        util.loadFile(filename, "Plants", plantsList);
     }
     
     public void addPlant(Plant newPlant, boolean setReminder) {
