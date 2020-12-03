@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  * A class to create and manipulate lists of plants.
- *
+ * @param plantsList An Arraylist of Plant objects that will hold all plants in the PlantList
  * @author Bre McNichols and Amber Lai Hipp and Michaela Dent
  */
 public class PlantList {
@@ -79,7 +79,11 @@ public class PlantList {
         System.out.println("Plant " + search + " not found.");
         return null;
     }
-    
+    /**
+    Removes plants from the list who's attributes don't fit into the user's needs.
+    @param search The search key designating the exact attribute being searched for
+    @param searchType The type of attribute that is being searched for, Water, Maintenance, or Light
+    */
     public void filterList(String search, String searchType) {
         ArrayList<Plant> mismatch = new ArrayList<Plant>();
         for (Plant p : plantsList) {
@@ -108,20 +112,29 @@ public class PlantList {
             }
         }
         // remove mismatches
-        plantsList.removeAll(mismatch);
+        plantsList.removeAll(mismatch);       
         // add some sort of exception check for empty list
         return;
     }
-    
+    /**
+    Function to save the list as a text file that can be read in the next time the program is opened.
+    */
     public void saveList() {
         Utility test = new Utility();
         test.writeFile(plantsList);
     }
-    
+    /**
+    Returns the length of the list in plants.
+    @return plantsList.size() the size of the plantList
+    @see plantsList.size()
+    */
     public int getSize() {
         return plantsList.size();
     }
-    
+    /**
+    Function to get a random plant out of a list
+    @return plantsList.get(i or 0) The randomized Plant that will be returned
+    */
     public Plant getRandom() {
         if (plantsList.size() == 1)
             return plantsList.get(0);
