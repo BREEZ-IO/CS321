@@ -35,17 +35,13 @@ public class PlantList {
         plantsList.remove(deadPlant);
     }
     
-    public void printList(){
-        for (int i = 0; i < plantsList.size(); i++) {
-            Plant temp = (plantsList.get(i));
-            System.out.println(temp.getName());
-            System.out.println(temp.getSciName());
-            System.out.println(temp.getNickname());
-            System.out.println(temp.getLightInfo());
-            System.out.println(temp.getWaterInfo());
-            System.out.println(temp.getLastWateredDate());
-            System.out.println(temp.getMaintenanceLevel() + "\n");
-        }  
+    public String printList(){
+        String output = "";
+        for (Plant p : plantsList) {
+            output += p.toString();
+        }
+        
+        return output;
     }
     
     public Plant searchList(String search, String searchType) {
