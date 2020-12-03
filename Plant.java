@@ -6,6 +6,16 @@ import java.util.Date;
  * @author Amber Lai Hipp
  */
 public class Plant {
+        /**
+     * Plant constructor used to make an instance of the Plant class
+     * @param plantName: The plant's common name
+     * @param plantSciName: The plant's scientific name
+     * @param plantNickname: The plant's nickname given by the user
+     * @param plantLight: The light level required by the plant
+     * @param plantWaterInfo: The watering period of the plant
+     * @param lastWatered: The last date that the plant was watered
+     * @param maintenanceLevel: How difficult the plant is to keep alive
+     */
     public Plant(String name, String sciName, String nickname, String light, String water, String lastWatered, String mLevel) {
         plantName = name;
         plantSciName = sciName;
