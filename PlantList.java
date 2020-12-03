@@ -56,7 +56,12 @@ public class PlantList {
         
         return output;
     }
-    
+    /**
+    Searches through a plantlist for a given plant by its name or nickname
+    @param search The search keyword
+    @param searchType Defines if the plant is being searched by name or nickname
+    @return p The Plant object that was being searched for, or null if not found
+    */
     public Plant searchList(String search, String searchType) {
         for (Plant p : plantsList) {
             if (searchType.equals("Nickname")){
