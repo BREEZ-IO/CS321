@@ -24,7 +24,11 @@ public class PlantList {
         }
         util.loadFile(filename, "Plants", plantsList);
     }
-    
+    /**
+    Function to add a plant to the plant list. It can also add a last watered date if needed.
+    @param newPlant: the plant that is going to be added to the list.
+    @param setLastWateredDate: A boolean that tells if the plant needs a last-watered date or not.
+    */
     public void addPlant(Plant newPlant, boolean setLastWateredDate) {
         if (setLastWateredDate == true) {
             newPlant.setLastWateredDate();
@@ -32,8 +36,11 @@ public class PlantList {
         
         plantsList.add(newPlant); 
     }
-    
-    public void removePlant(Plant deadPlant, boolean removeReminder) {
+    /**
+    Function to remove a given plant from a list.
+    @param deadPlant: The specific plant that will be removed from the list.
+    */
+    public void removePlant(Plant deadPlant) {
         plantsList.remove(deadPlant);
     }
     
