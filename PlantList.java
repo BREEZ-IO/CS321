@@ -25,11 +25,12 @@ public class PlantList {
         util.loadFile(filename, "Plants", plantsList);
     }
     
-    public void addPlant(Plant newPlant, boolean setReminder) {
-        plantsList.add(newPlant);
-        if (setReminder){
-            //add logic
+    public void addPlant(Plant newPlant, boolean setLastWateredDate) {
+        if (setLastWateredDate == true) {
+            newPlant.setLastWateredDate();
         }
+        
+        plantsList.add(newPlant); 
     }
     
     public void removePlant(Plant deadPlant, boolean removeReminder) {
