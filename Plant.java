@@ -68,14 +68,12 @@ public class Plant {
         }
     }
     
-    public void printInfo() {
-        System.out.println("Name: " + plantName);
-        System.out.println("Scientific Name: " + plantSciName);
-        System.out.println("Nickname: " + plantNickname);
-        System.out.println("Light: " + plantLight);
-        System.out.println("Water: " + plantWaterInfo);
-        System.out.println("Last Watered: " + lastWatered);
-        System.out.println("Maintenance Level: " + maintenanceLevel);
+    @Override
+    public String toString() {
+        return String.format("Name: " + plantName + "\nScientific Name: " + plantSciName
+                + "\nNickname: " + plantNickname + "\nLight: " + plantLight + "\nWater: " +
+                plantWaterInfo + "\nLast Watered: " + lastWatered + "\nMaintenance Level: "
+                + maintenanceLevel + "\n\n");
     }
     
     private String plantName;
