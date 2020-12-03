@@ -7,7 +7,9 @@ import java.util.ArrayList;
  */
 public class PlantList {
     /**
-     * 
+     * Constructor function to create a plant list based on a text file.
+     @param filename: A string containing the address of the file holding all plants to be added
+     @param util: A utility class to use the loadFile function 
      */    
     public PlantList(String filename, Utility util) {
         // if trying to create MyPlants
