@@ -15,7 +15,12 @@ public class PlantList {
      * 
      *@param fileName a string containing the address of the file holding all plants to be added.
      *@param util a utility class to use the loadFile function.
-     */    
+     */
+    @Override
+    public Plant clone() {
+    return (Plant)super.clone();
+    }
+
     public PlantList(String fileName, Utility util) {
         // If trying to create MyPlants
         if (fileName.equals("MyPlants.txt")) {
