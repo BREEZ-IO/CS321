@@ -74,7 +74,7 @@ public class PlantList {
      * 
      * @param search the search keyword.
      * @param searchType defines if the plant is being searched by name or nickname.
-     * @return p the plant that was being searched for, or null if not found.
+     * @return temp, a copy of plant that was being searched for, or null if not found.
      */
     public Plant searchList(String search, String searchType) {
         for (Plant p : plantsList) {
@@ -157,7 +157,7 @@ public class PlantList {
      *  the plant at a given index.
      * 
      * @param index the index of the plant you want to get access to.
-     * @return a plant object.
+     * @return temp, a copy of the plant object.
      */
     public Plant iterateList(int index) {
         try {
@@ -174,7 +174,7 @@ public class PlantList {
     /**
      * Picks a random plant from the list of plants.
      * 
-     * @return the plant object that was selected.
+     * @return temp, a copy of the plant object that was selected.
      */
     public Plant getRandom() {
         if (plantsList.size() == 1)
